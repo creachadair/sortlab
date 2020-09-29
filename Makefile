@@ -6,7 +6,7 @@
 ## Copyright (C) 2003-2006 Michael J. Fromberger, All Rights Reserved.
 ##
 .SUFFIXES: .java .class
-.PHONY: clean distclean jar
+.PHONY: clean distclean format jar
 
 JCC = javac
 JFLAGS = -source 1.6
@@ -34,6 +34,11 @@ jar: $(REALOBJS) Manifest
 
 $(REALOBJS): %.class: %.java
 	$(JCC) $(JFLAGS) SortLab.java
+
+# Format source code with google-java-format.
+format:
+	find . -type f -name '*.java' -print0 | \
+	  xargs -0 -t google-java-format --replace
 
 clean:
 	rm -f *~ core core.[0-9][0-9]*
