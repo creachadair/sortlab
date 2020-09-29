@@ -1,8 +1,7 @@
 /*
   Name:     BidirectionalBubbleSort.java
   Purpose:  Implements the bidirectional bubble sort algorithm.
-  Author:   M. J. Fromberger <http://www.dartmouth.edu/~sting/>
-  Info:     $Id$
+  Author:   M. J. Fromberger
 
   Copyright (C) 2006 Michael J. Fromberger, All Rights Reserved.
  */

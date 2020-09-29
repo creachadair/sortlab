@@ -1,8 +1,7 @@
 /*
   Name:     MergeSortLR.java
   Purpose:  Implements left-to-right mergesort.
-  Author:   M. J. Fromberger <http://www.dartmouth.edu/~sting/>
-  Info:     $Id$
+  Author:   M. J. Fromberger
 
   Copyright (C) 2003-2006 Michael J. Fromberger, All Rights Reserved.
  */

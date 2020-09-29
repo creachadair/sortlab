@@ -1,8 +1,7 @@
 /*
   Name:     OrderPanel.java
   Purpose:  Main interface panel for the sorting laboratory.
-  Author:   M. J. Fromberger <http://www.dartmouth.edu/~sting/>
-  Info:     $Id: OrderPanel.java,v 1.5 2006/02/28 05:58:49 sting Exp $
+  Author:   M. J. Fromberger
   
   Copyright (C) 2003-2006 M. J. Fromberger, All Rights Reserved.
  */

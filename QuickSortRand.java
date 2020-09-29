@@ -1,8 +1,7 @@
 /*
   Name:     QuickSortRand.java
   Purpose:  Implements Quicksort with randomized pivot selection.
-  Author:   M. J. Fromberger <http://www.dartmouth.edu/~sting/>
-  Info:     $Id: QuickSortRand.java,v 1.3 2006/02/28 06:11:54 sting Exp $
+  Author:   M. J. Fromberger
 
   Copyright (C) 2003-2006 Michael J. Fromberger, All Rights Reserved.
  */

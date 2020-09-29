@@ -1,8 +1,7 @@
 /*
   Name:     SortLab.java
   Purpose:  Main driver and UI for sorting laboratory.
-  Author:   M. J. Fromberger <http://www.dartmouth.edu/~sting/>
-  Info:     $Id: SortLab.java,v 1.6 2006/02/28 06:00:26 sting Exp $
+  Author:   M. J. Fromberger
   
   Copyright (C) 2003-2006 Michael J. Fromberger, All Rights Reserved.
  */

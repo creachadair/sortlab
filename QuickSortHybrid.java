@@ -1,8 +1,7 @@
 /*
   Name:     QuickSortHybrid.java
   Purpose:  Hybrid QuickSort simulation with insertion sort.
-  Author:   M. J. Fromberger <http://www.dartmouth.edu/~sting/>
-  Info:     $Id: QuickSortHybrid.java,v 1.3 2006/02/28 06:11:54 sting Exp $
+  Author:   M. J. Fromberger
 
   Copyright (C) 2003-2004 Michael J. Fromberger, All Rights Reserved.
  */

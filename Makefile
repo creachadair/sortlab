@@ -1,8 +1,7 @@
 ##
 ## Name:     Makefile
 ## Purpose:  Build script for SortLab.
-## Author:   M. J. Fromberger <http://www.dartmouth.edu/~sting/>
-## Info:     $Id: Makefile,v 1.7 2006/02/28 06:13:58 sting Exp $
+## Author:   M. J. Fromberger
 ##
 ## Copyright (C) 2003-2006 Michael J. Fromberger, All Rights Reserved.
 ##
