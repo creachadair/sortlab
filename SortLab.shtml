@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Sorting Laboratory</title>
+  <link rel="stylesheet" type="text/css" href="../../styles/new.css">
+</head>
+<body>
+<!--#config timefmt="%d-%b-%Y at %H:%M %p"-->
+<h1 align="center">Sorting Laboratory</h1>
+
+<p class="pageinfo">by 
+ <a href="/~sting/">Michael J. Fromberger</a>,
+ Copyright &copy; 2003 All Rights Reserved.</p>
+
+<p align="center">
+<applet code="SortLab.class" archive="sortlab.jar"
+        width="800" height="600">
+</applet></p>
+
+<hr />
+
+<h2 align="center">User's Guide</h2>
+
+<p>The <strong>Sorting Laboratory</strong> is a program to help you
+visualize the behaviour of various sorting algorithms.  It simulates
+the behaviour of the selected algorithm, and keeps track of how many
+times the algorithm compares two values (<em>comparisons</em>) and
+how many times the algorithm moves a data value (<em>moves</em>).
+In this way, you can get a feel for the time complexity of the 
+various algorithms.</p>
+
+<p>The following controls are available:</p>
+
+<hr />
+
+<h4>Algorithm</h4>
+
+<p><img src="img/algorithm.png" width="175" height="34"
+        style="float: right"
+	alt="Choose algorithm">
+
+This menu permits you to select what sorting algorithm will be
+employed.  As of this writing, the following algorithms are
+implemented in this program:</p>
+<br style="clear: both" />
+<ul>
+  <li>Selection sort</li>
+  <li>Insertion sort</li>
+  <li>Bubble sort</li>
+  <li>Shell sort</li>
+  <li>QuickSort (M3)</li>
+  <li>QuickSort (R)</li>
+  <li>QuickSort (M3) Hybrid</li>
+  <li>Heapsort</li>
+  <li>Mergesort</li>
+  <li>Counting sort</li>
+</ul>
+
+<p>The difference between the (R) and (M3) variations of QuickSort is
+in how the pivot element is chosen for partitioning.  In
+<strong>QuickSort (M3)</strong>, the "median of three" algorithm is
+used.  With
+<strong>QuickSort (R)</strong>, a pivot is chosen at random.  The 
+<strong>QuickSort (M3) Hybrid</strong> algorithm uses median-of-three
+partitioning, but on ranges containing twenty elements or fewer,
+the Insertion Sort algorithm is used instead of continuing the
+recursive partitioning.  This generally makes the algorithm perform a
+little faster (fewer comparisons, but more data movement).</p>
+
+<dl class="note">
+  <dt>Note</dt>
+
+  <dd>If you change which algorithm you are using while you are
+  single-stepping, the sorting statistics will be re-set, and the
+  new algorithm will "start over", but the data will be left just
+  as they were before the change.  This is a feature.</dd>
+</dl>
+
+<hr />
+
+<h4>Speed</h4>
+
+<p><img src="img/speed.png" width="195" height="40"
+        style="float: right"
+	alt="Execution speed">
+
+This slider controls how fast the algorithm will proceed when you
+click the <strong>Run</strong> button (<a href="#control_buttons">see
+below</a>).  At "Crawl", there is about a half-second pause after each
+step; at "Hyper", the pause is about 5 milliseconds.  You can adjust
+this value while the sort is running.</p>
+
+<br style="clear: both" />
+<hr />
+
+<h4>Point Size</h4>
+
+<p><img src="img/size.png" width="205" height="40"
+        style="float: right"
+	alt="Set point size">
+
+This slider indirectly lets you control how many points are to be
+sorted.  You do this by setting how large they are, on a scale from 1
+to 30 pixels.  The program includes as many points as will fit in the
+visible area of the program's window.</p>
+
+<br style="clear: both" />
+<dl class="note">
+  <dt>Note:</dt>
+
+  <dd>If you change the size of the points, it changes the size of the
+  data set, which causes any currently-active sorting operation to be
+  reset.</dd>
+</dl>
+
+<hr />
+
+<h4>Ordering</h4>
+
+<p><img src="img/ordering.png" width="165" height="32"
+        style="float: right"
+	alt="Ordering">
+
+This menu lets you control how the data are initially ordered before
+you begin sorting them.  By default, this is set to "Random", which
+causes the data to be shuffled pseudo-randomly.  You can also choose
+"Ascending" or "Descending" (as these orderings are corner cases for
+certain algorithms such as Insertion Sort and Quicksort).</p>
+
+<hr style="clear: both" />
+
+<a name="control_buttons"></a>
+<h4>Control Buttons</h4>
+
+<p><img src="img/controls.png" width="265" height="40"
+       style="float: right"
+       alt="Step, Run, Reset, Reseed">
+These buttons control the execution of the algorithm.  Clicking the
+<strong>Step</strong> button causes the algorithm to take a single
+step (usually, a single comparison operation).  Clicking the
+<strong>Run</strong> button causes it to take steps automatically,
+until either the data set is completely sorted, or until you click
+<strong>Run</strong> a second time.</p>
+
+<p>The <strong>Reset</strong> button causes the sorting process to
+"start over", clearing the number of comparisons and moves to zero and
+restoring the elements to their original unsorted positions.</p>
+
+<p>The <strong>Reset</strong> button restores the data to the same
+order each time it is selected.  To change the ordering, select the
+<strong>Reseed</strong> button, which will cause a new random
+permutation to be chosen.  Note that the initial ordering also depends
+upon how many data points there are, so if you change the size of the
+points, choosing <strong>Reset</strong> will choose a new permutation
+based upon the same seed.</p>
+
+<hr />
+
+<h3>Interpreting the Output</h3>
+
+<p><img src="img/feedback.png" width="400" height="341"
+        style="float: right"
+	alt="Main window">
+
+This diagram illustrates the main window of the sorting laboratory.
+Each datum is represented by a black dot or vertical bar.  The
+horizontal (X) axis represents the <em>position</em> of the element,
+while the vertical (Y) axis represents its <em>value</em>.  Each value
+in the data set is unique, so it has a unique destination in the final
+ordering.</p>
+
+<p>In order that you can see what is happening while an algorithm is
+being simulated, the sorting laboratory paints the points representing
+the last values that were <em>compared</em> in 
+  <span style="color: blue">blue</span>, while the last positions that
+were <em>moved</em> are painted
+  <span style="color:red">red</span>.  
+A point that was both compared and moved recently is painted half-red
+and half-blue.</p>
+
+<p>In addition, a horizontal line is drawn through each blue point,
+and a vertical line is drawn through each red point.  The vertical
+lines give you a sense of where the algorithm's "attention" is focused
+within the data being sorted.<p>
+
+<br style="clear: both">
+
+<p><img src="img/status.png" width="280" height="30"
+        style="float: right"
+	alt="Status bar">
+
+While an sort is in progress, you can get information about how many
+comparisons and data moves have been performed from the status readout
+on the bottom right of the screen.  The <strong>Comparisons</strong>
+field tells you how many times two elements have been compared.  The
+<strong>Moves</strong> field tells you how many times a data element
+has been moved or copied (note that a "swap" operation, exchanging two
+distinct elements, counts as <em>two</em> moves).  And, finally, the
+<strong>Elements</strong> field tells you how many data points are
+currently being displayed and sorted.</p>
+
+<hr />
+
+<p align="center">
+  <span class="link"><a href="../../sw.shtml">Return to Software</a></span>
+</p>
+
+<p class="pageinfo"><strong>Last updated</strong>:
+  <!--#echo var="LAST_MODIFIED"--></p>
+
+</body>
+</html>
