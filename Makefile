@@ -9,7 +9,7 @@
 .PHONY: clean distclean format jar
 
 JCC = javac
-JFLAGS = -source 1.6
+JFLAGS = -source 1.7
 
 RAW = $(subst +,"$$",\
 	BubbleSort. BidirectionalBubbleSort. Clock. CountingSort. \
